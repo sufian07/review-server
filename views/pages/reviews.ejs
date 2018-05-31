@@ -1,0 +1,42 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="class="container-fluid"">
+
+<header>
+    <% include ../partials/header %>
+</header>
+
+<main class="container">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Reviewer</th>
+            <th>Performer</th>
+            <th>Ratings</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% reviews.forEach(function(review) { %>
+              <tr>
+              <td><%= review.performerId %> </td> 
+              <td><%= review.reviewerId %></td>
+              <td><%= review.rating %> </td> 
+              <td><%= review.description %></td>
+              </tr>
+            <% }); %>
+        </tbody>
+      </table>
+</main>
+
+<footer>
+    <% include ../partials/footer %>
+</footer>
+
+</body>
+</html>

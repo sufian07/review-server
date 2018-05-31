@@ -1,0 +1,25 @@
+{
+  "name": "bikroy",
+  "version": "1.0.0",
+  "description": "A simple app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "mysql2": "^1.5.3",
+    "nodemon": "^1.17.5",
+    "sequelize": "^4.37.10",
+    "sequelize-cli": "^4.0.0",
+    "serve-favicon": "^2.5.0"
+  }
+}

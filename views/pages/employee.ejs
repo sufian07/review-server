@@ -1,0 +1,48 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="class="container-fluid"">
+
+<header>
+    <% include ../partials/header %>
+</header>
+
+<main class="container">
+    <a class="btn btn-info btn-lg" href="/admin/employee/add">Add Employee</a>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>firstName</th>
+            <th>lastName</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(function(user) { %>
+              <tr>
+              <td><%= user.firstName %> </td> 
+              <td><%= user.lastName %></td>
+              <td>
+                    <a class="btn btn-info" href="/admin/employee/<%=user.id %>/edit">
+                      <i class="fa fa-pencil"></i>
+                    </a>
+                    <a class="btn btn-info" href="/admin/employee/<%=user.id %>/delete">
+                        <i class="fa fa-trash-o"></i>
+                    </a>
+              </td>
+              </tr>
+            <% }); %>
+        </tbody>
+      </table>
+</main>
+
+<footer>
+    <% include ../partials/footer %>
+</footer>
+
+</body>
+</html>
